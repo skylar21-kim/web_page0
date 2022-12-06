@@ -4,7 +4,7 @@
 
     {% if user.is_authenticated %}
         {% if user.is_superuser or user.is_staff %}
-            <a class="btn btn-info btn-sm float-right" href="/bog/create_post/" role="button"><i class="fa-solid fa-pen"></i>&nbsp;&nbsp;New Post</a>
+            <a class="btn btn-info btn-sm float-right" href="/blog/create_post/" role="button"><i class="fa-solid fa-pen"></i>&nbsp;&nbsp;New Post</a>
         {% endif %}
     {% endif %}
 
@@ -36,7 +36,7 @@
               <div class="small text-muted">{{ p.create_at }}</div>
               <h2 class="card-title h4">{{ p.title }}</h2>
               {% if p.hook_text %}
-                <h5 class=""text-muted">{{ p.hook_text }}</h5>
+                <h5 class="text-muted">{{ p.hook_text }}</h5>
               {% endif %}
               <p class="card-text">{{ p.content | truncatewords:45 }}</p>
 
