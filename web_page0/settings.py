@@ -34,18 +34,19 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
-    "django_extensions",
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django_extensions',
+    # 2022.12.05
+    'crispy_forms',
+    'markdownx',
 
-    "crispy_forms",
-
-    "blog",
-    "single_pages",
+    'blog',
+    'single_pages',
 ]
 
 MIDDLEWARE = [
