@@ -91,4 +91,4 @@ class Comment(models.Model):
         if self.author.socialaccount_set.exists():
             return self.author.socialaccount_set.first().get_avatar_url()
         else:
-            return f'https://api.adorable.io/avatars/60/{ self.author.username }.png'
+            return 'https://cdn.dribbble.com/users/2321513/avatars/normal/9e842dd23c3ad5cbe4115ece3483f8d0.png?1641883190&compress=1&resize=50x50'
