@@ -61,6 +61,12 @@ class Post(models.Model) :
     def get_content_markdown(self):
         return markdown(self.content)
 
+    def get_avatar_url(self):
+        if self.author.socialaccount_set.exists():
+            return self.author.socialaccount_set.first().get_avatar_url()
+        else:
+            return 'https://cdn.dribbble.com/users/2321513/avatars/normal/9e842dd23c3ad5cbe4115ece3483f8d0.png?1641883190&compress=1&resize=50x50'
+
 # class Comment(models.Model):
 #     post        = models.ForeignKey(Post, on_delete=models.CASCADE)
 #     author      = models.ForeignKey(User, on_delete=models.CASCADE)
